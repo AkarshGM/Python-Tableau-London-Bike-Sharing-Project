@@ -1,4 +1,6 @@
 # Python-Tableau-London-Bike-Sharing-Project
+![Logo](https://github.com/AkarshGM/Python-Tableau-London-Bike-Sharing-Project/blob/main/Tableau-python%20logo.png)
+
 
 ## Objective
 This Project's objective is to gather data programatically from kaggle, assess and explore the data, manipulate it using Pandas and finally create an interactive great looking dashboard in Tableau. 
