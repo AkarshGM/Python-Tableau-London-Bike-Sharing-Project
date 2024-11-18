@@ -84,3 +84,42 @@ bikes.rename(new_cols_dict, axis=1, inplace=True)
 ```python
 bikes.humidity_percent = bikes.humidity_percent / 100
 ```
+
+**7. Creating Season and Weather dictionary to map the integers in the column with the actual written values**
+```python
+# creating a season dictionary so that we can map the integers 0-3 to the actual written values
+season_dict = {
+    '0.0':'spring',
+    '1.0':'summer',
+    '2.0':'autumn',
+    '3.0':'winter'
+}
+
+# creating a weather dictionary so that we can map the integers to the actual written values
+weather_dict = {
+    '1.0':'Clear',
+    '2.0':'Scattered clouds',
+    '3.0':'Broken clouds',
+    '4.0':'Cloudy',
+    '7.0':'Rain',
+    '10.0':'Rain with thunderstorm',
+    '26.0':'Snowfall'
+}
+
+# changing the seasons column data type to string
+bikes.season = bikes.season.astype('str')
+# mapping the values 0-3 to the actual written seasons
+bikes.season = bikes.season.map(season_dict)
+
+# changing the weather column data type to string
+bikes.weather = bikes.weather.astype('str')
+# mapping the values to the actual written weathers
+bikes.weather = bikes.weather.map(weather_dict)
+```
+
+**8. Exporting the final Dataframe for visualisation in Tableau**
+```python
+bikes.to_excel('london_bikes_final.xlsx', sheet_name='Data')
+```
+
+
