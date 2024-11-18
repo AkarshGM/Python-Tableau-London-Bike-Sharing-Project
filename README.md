@@ -25,3 +25,62 @@ This Project's objective is to gather data programatically from kaggle, assess a
     - 94 = Freezing Fog
 
 [Link to Kaggle Dataset](https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset/data)
+
+## Data Manipulation using Pandas
+**1. Importing necessary libraries**
+```python
+#!pip install pandas
+#!pip install zipfile
+#!pip install kaggle
+
+# import pandas library
+import pandas as pd
+
+# import zipfile library (To extract the file downloaded from Kaggle)
+import zipfile
+
+# import kaggle library (To download the dataset programatically from Kaggle)
+import kaggle
+```
+
+**2. Download dataset from Kaggle using the Kaggle API**
+```python
+# To download dataset from kaggle using the Kaggle API
+!kaggle datasets download -d hmavrodiev/london-bike-sharing-dataset
+```
+
+**3. Extract the file from the downloaded zip file**
+```python
+zipfile_name = 'london-bike-sharing-dataset.zip'
+with zipfile.ZipFile(zipfile_name, 'r') as file:
+    file.extractall()
+```
+
+**4. Read the CSV file as Pandas Dataframe**
+```python
+bikes = pd.read_csv("london_merged.csv")
+```
+
+**5. Modifying the column names**
+```python
+new_cols_dict ={
+    'timestamp':'time',
+    'cnt':'count', 
+    't1':'temp_real_C',
+    't2':'temp_feels_like_C',
+    'hum':'humidity_percent',
+    'wind_speed':'wind_speed_kph',
+    'weather_code':'weather',
+    'is_holiday':'is_holiday',
+    'is_weekend':'is_weekend',
+    'season':'season'
+}
+
+# Renaming the columns to the specified column names
+bikes.rename(new_cols_dict, axis=1, inplace=True)
+```
+
+**6. Changing the humidity values to percentage (i.e. value between 0 and 1)**
+```python
+bikes.humidity_percent = bikes.humidity_percent / 100
+```
