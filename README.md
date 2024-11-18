@@ -144,7 +144,7 @@ bikes.to_excel('london_bikes_final.xlsx', sheet_name='Data')
 - Temperature Bins (for Heatmap)
 - Wind Bins (for Heatmap)
 
-## Dashboard
+## Dashboard - [Click Here for Live Dashboard](https://public.tableau.com/app/profile/akarshgm/viz/LondonBikeRides-MovingAverageandHeatmap_17318538006630/Dashboard1)
 
 ![Tableau Dashboard](https://github.com/AkarshGM/Python-Tableau-London-Bike-Sharing-Project/blob/main/Tableau%20Dashboard.png)
 
@@ -152,7 +152,7 @@ bikes.to_excel('london_bikes_final.xlsx', sheet_name='Data')
 
 ![Tooltip Charts](https://github.com/AkarshGM/Python-Tableau-London-Bike-Sharing-Project/blob/main/Tooltip%20Charts.png)
 
-[Click Here for Live Dashboard](https://public.tableau.com/app/profile/akarshgm/viz/LondonBikeRides-MovingAverageandHeatmap_17318538006630/Dashboard1)
+[Download the Tableau File](https://github.com/AkarshGM/Python-Tableau-London-Bike-Sharing-Project/blob/main/Tableau%20-%20London%20Bike%20Rides%20-%20Moving%20Average%20and%20Heatmap.twbx)
 
 
 
