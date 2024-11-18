@@ -132,4 +132,29 @@ bikes.to_excel('london_bikes_final.xlsx', sheet_name='Data')
 - Total Rides by Weather
 - Total Rides by Hour
 
+**Parameters:**
+- Moving Average Duration (Data type - Integer)
+- Moving Average Period (Data type - String; Value - day, week, month)
+
+**Other fields used:**
+- Min Month
+- Max Month
+- Moving Average Period Set
+- Reference Band
+- Temperature Bins (for Heatmap)
+- Wind Bins (for Heatmap)
+
+## Dashboard
+
+![Tableau Dashboard](https://github.com/AkarshGM/Python-Tableau-London-Bike-Sharing-Project/blob/main/Tableau%20Dashboard.png)
+
+## Tooltip Charts
+
+![Tooltip Charts](https://github.com/AkarshGM/Python-Tableau-London-Bike-Sharing-Project/blob/main/Tooltip%20Charts.png)
+
+[Click Here for Live Dashboard](https://public.tableau.com/app/profile/akarshgm/viz/LondonBikeRides-MovingAverageandHeatmap_17318538006630/Dashboard1)
+
+
+
+
 
