@@ -122,4 +122,14 @@ bikes.weather = bikes.weather.map(weather_dict)
 bikes.to_excel('london_bikes_final.xlsx', sheet_name='Data')
 ```
 
+## Tableau Visualization
+**Visualizations required:**
+- Total Bike Rides
+- Moving Average (with Set actions, User-defined parameters, Timeline filter)
+- Temperature vs Wind speed Heatmap
+
+**Tooltip Charts:**
+- Total Rides by Weather
+- Total Rides by Hour
+
 
